@@ -26,7 +26,7 @@ class AvantagesController extends Controller
     public function create()
     {
         $avantages =Avantages::all();
-        return view("avantages.create");
+        return view("avantages.create", compact("avantages"));
     }
 
     /**
@@ -60,9 +60,9 @@ class AvantagesController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        $avantages = Avantages::all();
+        $avantages = Avantages::find($id);
         return view("avantages.edit");
         
     }
@@ -97,4 +97,9 @@ class AvantagesController extends Controller
         return redirect()->back();
         
     }
+    
+    public function __construct() {
+        $this->middleware('isConnected');
+    }
 }
+

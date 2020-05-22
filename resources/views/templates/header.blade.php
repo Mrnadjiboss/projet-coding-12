@@ -1,6 +1,7 @@
 <section id="featured">
 
     <!-- slideshow start here -->
+   
 
     <div class="camera_wrap" id="camera-slide">
 
@@ -9,9 +10,12 @@
         <div class="camera_caption fadeFromLeft">
           <div class="container">
             <div class="row">
-              <div class="span6">
-                <h2 class="animated fadeInDown"><strong>Great template for <span class="colored">multi usage</span></strong></h2>
-                <p class="animated fadeInUp"> Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. Iisque deseruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
+              <div class="span6"> 
+                @foreach ($headers as $header)
+                    
+                <h2 class="animated fadeInDown"><strong><span class="colored">{{$header ->title}} </span></strong></h2>
+              <p class="animated fadeInUp">{{$header -> description}}</p>
+                @endforeach
                 <a href="#" class="btn btn-success btn-large animated fadeInUp">
                                           <i class="icon-link"></i> Read more
                                       </a>

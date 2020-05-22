@@ -61,10 +61,10 @@ class WorksController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        $works = Works::all();
-        return view("works.edit");
+        $works = Works::find($id);
+        return view("works.edit", compact("works"));
         
     }
 
@@ -82,6 +82,9 @@ class WorksController extends Controller
 
         $works->save();
         return redirect()->back();
+    }
+    public function __construct() {
+        $this->middleware('isConnected');
     }
 
     /**

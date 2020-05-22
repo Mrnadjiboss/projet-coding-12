@@ -5,6 +5,7 @@ use App\Testimonials;
 use App\Contacts;
 use App\Header;
 use App\Works;
+use App\Avantages;
 
 
 
@@ -20,7 +21,21 @@ use App\Works;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $works = Works::all();
+    $headers = Header::all();
+    $contacts = Contacts::all();
+    $testimonials = Testimonials::all();
+    $avantages = Avantages::all();
+    return view('welcome', compact('works', 'headers', 'contacts', 'testimonials', 'avantages'));
+});
+
+Route::get('/backoffice', function () {
+    $works = Works::all();
+    $headers = Header::all();
+    $contacts = Contacts::all();
+    $testimonials = Testimonials::all();
+    $avantages = Avantages::all();
+    return view('backoffice', compact('works', 'headers', 'contacts', 'testimonials', 'avantages'));
 });
 Route::resource('header', 'HeaderController');
 Route::resource('testomonial', 'TestimonialsController');

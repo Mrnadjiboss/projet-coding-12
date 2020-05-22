@@ -11,11 +11,14 @@
                   <i class="ico icon-circled icon-bgdark icon-star active icon-3x"></i>
                 </div>
                 <div class="text">
-                  <h4>High <strong>Quality</strong></h4>
-                  <p>
-                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                  </p>
-                  <a href="#">Learn More</a>
+                  @foreach ($avantages -> slice(0,1) as $avantage)
+                <h4>  {{$avantage -> title }}</h4>
+        
+                <p>
+                  {{$avantage -> title }}
+                </p>
+                  @endforeach
+                 
                 </div>
               </div>
             </div>
@@ -26,11 +29,15 @@
                   <i class="ico icon-circled icon-bgdark icon-dropbox active icon-3x"></i>
                 </div>
                 <div class="text">
-                  <h4>Rich of <strong>Features</strong></h4>
+                  @foreach ($avantages -> slice(0,1) as $avantage)
+                  <h4>  {{$avantage -> title }}</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    {{$avantage -> description }}
                   </p>
-                  <a href="#">Learn More</a>
+          
+                    @endforeach
+              
+                  
                 </div>
               </div>
             </div>
@@ -40,11 +47,15 @@
                   <i class="ico icon-circled icon-bgdark icon-laptop active icon-3x"></i>
                 </div>
                 <div class="text">
-                  <h4>Modern <strong>Design</strong></h4>
+                  @foreach ($avantages -> slice(0,1) as $avantage)
+                  <h4>  {{$avantage -> title }}</h4>
                   <p>
-                    Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    {{$avantage -> description }}
                   </p>
-                  <a href="#">Learn More</a>
+          
+                    @endforeach
+                   
+                  
                 </div>
               </div>
             </div>

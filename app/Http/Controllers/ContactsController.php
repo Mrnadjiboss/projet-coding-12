@@ -35,6 +35,10 @@ class ContactsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct() {
+        $this->middleware('isConnected');
+    }
     public function store(Request $request)
     {
         // $contact = new Contacts();
@@ -63,9 +67,10 @@ class ContactsController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        //
+        $contacts = Contacts::find($id);
+        return view("contacts.edit", compact("contacts"));
     }
 
     /**

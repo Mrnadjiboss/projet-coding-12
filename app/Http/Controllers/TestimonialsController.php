@@ -25,8 +25,8 @@ class TestimonialsController extends Controller
      */
     public function create()
     {
-        $testionials =Testionials::all();
-        return view("testimonials.create");
+        $testimonials =Testimonials::all();
+        return view("testimonials.create", compact("testimonials"));
     }
 
     /**
@@ -56,6 +56,9 @@ class TestimonialsController extends Controller
     {
         //
     }
+    public function __construct() {
+        $this->middleware('isConnected');
+    }
 
     /**
      * Show the form for editing the specified resource.
@@ -63,10 +66,10 @@ class TestimonialsController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        $testimonials = Testionials::all();
-        return view("testimonials.edit");
+        $testimonials = Testimonials::find($id);
+        return view("testimonials.edit", compact("testimonials"));
         
     }
 

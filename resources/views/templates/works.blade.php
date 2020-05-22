@@ -9,7 +9,12 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/1.jpg" alt="" /></div>
+                    <div>
+                      @foreach ($works -> slice(0,1) as $work)
+                      <img src=  {{$work ->img_path }} class="img-fluid" alt="" />
+              
+                        @endforeach
+                    </div>
                     <figcaption>
                       <div>
                         <span>
@@ -26,7 +31,12 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/2.jpg" alt="" /></div>
+                    <div>
+                      @foreach ($works -> slice(0,1) as $work)
+                      <img src=  {{$work ->img_path }} class="img-fluid" alt="" />
+              
+                        @endforeach
+                    </div>
                     <figcaption>
                       <div>
                         <span>
@@ -43,7 +53,12 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/3.jpg" alt="" /></div>
+                    <div>
+                      @foreach ($works -> slice(0,1) as $work)
+                      <img src=  {{$work ->img_path }} class="img-fluid" alt="" />
+              
+                        @endforeach
+                    </div>
                     <figcaption>
                       <div>
                         <span>
@@ -60,7 +75,13 @@
               <div class="span3">
                 <div class="item">
                   <figure>
-                    <div><img src="img/dummies/works/4.jpg" alt="" /></div>
+                    <div>
+
+                      @foreach ($works -> slice(0,1) as $work)
+                      <img src=  {{$work ->img_path }} class="img-fluid" alt="" />
+              
+                        @endforeach
+                    </div>
                     <figcaption>
                       <div>
                         <span>

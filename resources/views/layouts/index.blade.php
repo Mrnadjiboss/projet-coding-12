@@ -136,6 +136,8 @@
                         </li>
                         <li>
                           <a href="contact.html">Contact </a>
+                           <a href="/backoffice">Backoffice </a>
+                           <a href="/home">login </a>
                         </li>
                       </ul>
                     </nav>

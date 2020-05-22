@@ -23,11 +23,11 @@ class HeaderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $headers =Header::all();
-        return view("header.edit");
-    }
+    // public function create()
+    // {
+    //     $headers =Header::all();
+    //     return view("header.editheader");
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -57,10 +57,10 @@ class HeaderController extends Controller
      * @param  \App\cr  $cr
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        $headers = Header::all();
-        return view("header.edit");
+        $header = Header::find($id);
+        return view("header.editheader", compact('header'));
         
     }
 
@@ -90,5 +90,8 @@ class HeaderController extends Controller
     public function destroy(cr $cr)
     {
         //
+    }
+    public function __construct() {
+        $this->middleware('isConnected');
     }
 }

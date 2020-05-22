@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="container">
-    <form action='/contact' method="post">
+    <form action='/avantage/{{$avantage}}' method="post">
       @csrf
-      
+      @method("put")
 
-      <input type="text" value="address" class="form-control" name="address">
-      <input type="text" value="phone number" name="phone_number">
-      <input type="text" value="fax number" name="fax_number">
-      <input type="email" value="email" name="email">
+      <input type="text" value="title" class="form-control" name="title">
+      <input type="text" value="name" name="name"> 
+      <input type="text" value="link" name="link">
+      <input type="text" value="img_path" name="img_path">
       <button type="submit" class="btn btn-primary">Submit</button>
  
     </form>

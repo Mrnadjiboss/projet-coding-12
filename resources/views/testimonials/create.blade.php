@@ -1,4 +1,4 @@
-{{-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="container">
-    <hr class="bg-danger">
-    <form action='/roles' method="post">
-        @csrf
-          <div class="form-group">
-              <label for="exampleInputEmail1">Roles</label>
-              <input type="text" class="form-control"   placeholder="Enter role" name= "role_name" >
-            </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+    <div class="container">
+    <form action='/testimonial' method="post">
+      @csrf
+     
+
+      <input type="text" value="title" class="form-control" name="text">
+      <input type="text" value="name" name="name"> 
+      <input type="text" value="link" name="link">
+      <input type="text" value="img_path" name="img_path">
+      <button type="submit" class="btn btn-primary">Submit</button>
+ 
     </form>
     </div>
-</body>
-</html> --}}
+      
+
+
+</body> 
+</html>
